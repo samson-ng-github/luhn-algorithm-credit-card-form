@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", serif;
+}
+.root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddeefc;
+}
+
+.form {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: rgba(90, 116, 148, 0.4) 0 30px 60px 0;
+  padding: 25px;
+  margin: 20px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a3b5d;
+  margin-bottom: 5px;
+}
+
+.input {
+  display: block;
+  border: 1px solid #ced6e0;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #1a3b5d;
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.input:hover,
+.input:focus {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  color: #1a3b5d;
+  border: 1px solid #3d9cff;
+}
+
+.input:focus {
+  box-shadow: rgba(32, 56, 117, 0.35) 0px 10px 20px -13px;
+}
+
+.input--passed {
+  color: #bab86c;
+  border: 1px solid #bab86c;
+}
+
+.input--failed {
+  color: #ae0700;
+  border: 1px solid #ae0700;
+}
+
+.material-icons {
+  pointer-events: none;
+  color: #1a3b5d;
+  position: absolute;
+  font-size: 21px;
+  right: 6px;
+  bottom: 17px;
+}
+
+.input__icon--passed {
+  color: #bab86c;
+}
+
+.input__icon--failed {
+  color: #ae0700;
+}
+
+.field,
+.select {
+  position: relative;
+}
+
+.form__expiration-cvv-div {
+  display: flex;
+  flex: 1;
+}
+
+.form__expiration-div {
+  display: flex;
+  flex: calc(100% * 2 / 3);
+}
+
+.form__expiration-month-div,
+.form__expiration-year-div {
+  margin-right: 15px;
+  flex: 1;
+}
+
+.form__cvv-div {
+  margin-left: 15px;
+  flex: calc(100% / 3);
+}
+
+.button {
+  display: block;
+  width: 100%;
+  border: none;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  background-color: #2364d2;
+  box-shadow: rgba(35, 100, 210, 0.3) 3px 10px 20px 0px;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 0 0 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #1a3b5d;
+}
+
+.saved-cards {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a3b5d;
+  margin: 40px 0 5px 0;
+}
+
+.saved-cards__item {
+  display: block;
+  position: relative;
+  border: 1px solid #ced6e0;
+  width: auto;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #1a3b5d;
+  padding: 15px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.saved-cards__item:last-child {
+  margin-bottom: 0;
+}
+
+.saved-cards__item__icon {
+  pointer-events: auto;
+  cursor: pointer;
+  bottom: 28.5px;
+  right: 10px;
+}
+
+.message {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.message--passed {
+  color: #bab86c;
+}
+
+.message--failed {
+  color: #ae0700;
+}
+
+@media only screen and (max-width: 610px) {
+  .form {
+    padding: 25px;
+    margin: 20px;
+  }
+
+  .button {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .form__expiration-cvv-div {
+    flex-direction: column;
+  }
+
+  .form__expiration-month-div {
+    margin: 0 7.5px 0 0;
+  }
+
+  .form__expiration-year-div {
+    margin: 0 0 0 7.5px;
+  }
+
+  .form__cvv-div {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .root {
+    justify-content: flex-start;
+    width: 340px;
+  }
+
+  .form {
+    width: 250px;
+  }
+}
